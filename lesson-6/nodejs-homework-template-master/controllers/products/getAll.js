@@ -1,14 +1,14 @@
-const {Product} = require("../../models");
+const { Product } = require('../../models')
 
 const getAll = async (req, res) => {
-    const products = await Product.find({});
-    res.json({
-        status: "success",
-        code: 200,
-        data: {
-            result: products
-        }
-    });
-};
+  const products = await Product.find({})
+  res.json({
+    status: 'success',
+    code: 200,
+    data: {
+      result: products,
+    },
+  })
+}
 
-module.exports = getAll;
+module.exports = getAll
