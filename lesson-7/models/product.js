@@ -31,6 +31,11 @@ const productSchema = Schema(
       unique: true,
       match: codeRegexp,
     },
+    owner: {
+      type: Schema.Types.ObjectId,
+      ref: 'user',
+      required: true,
+    },
   },
   { versionKey: false, timestamps: true }
 )
